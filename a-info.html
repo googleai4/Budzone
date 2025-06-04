@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budzone</title>
+    <meta name="description" content="Explore top AI models like Perplexity, Grok, Gemini, and GPT-4 on Budzone. Compare features and discover the best AI tools for your needs.">
+    <link rel="shortcut icon" href="image-removebg-preview (4).png" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #ede9fe;
+            color: #2d006b;
+            min-height: 100vh;
+        }
+        nav {
+            width: 100%;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            position: relative;
+            z-index: 10;
+        }
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+            padding: 0 20px;
+        }
+        .nav-left {
+            display: flex;
+            align-items: center;
+        }
+        .brand {
+            color: #7c3aed;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: 1px;
+            margin-left: 10px;
+        }
+        .nav-right {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-right li {
+            margin: 0 12px;
+        }
+        .nav-right li a {
+            color: #7c3aed;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.08rem;
+            transition: color 0.2s;
+        }
+        .nav-right li a:hover {
+            color: #a78bfa;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto 0 auto;
+            background: rgba(255,255,255,0.65); /* semi-transparent white */
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(124,58,237,0.08);
+            padding: 36px 28px;
+        }
+        h1 {
+            text-align: center;
+            color: #7c3aed;
+            margin-bottom: 36px;
+        }
+        .ai-section {
+            margin-bottom: 44px;
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
+            border-bottom: 1px solid #ede9fe;
+            padding-bottom: 28px;
+        }
+        .ai-section:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .ai-logo {
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+            background: #f3f0ff;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(124,58,237,0.06);
+        }
+        .ai-logo img {
+            max-width: 70px;
+            max-height: 70px;
+            display: block;
+        }
+        .ai-content {
+            flex: 1;
+        }
+        .ai-title {
+            color: #a78bfa;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .ai-info {
+            font-size: 1.08rem;
+            color: #2d006b;
+            margin-bottom: 6px;
+        }
+        .ai-features {
+            margin: 10px 0 0 0;
+            padding-left: 18px;
+            color: #4b2995;
+        }
+        footer {
+            text-align: center;
+            color: #ccc;
+            padding: 28px 0 10px 0;
+            font-size: 1rem;
+            margin-top: 60px;
+        }
+        @media (max-width: 700px) {
+            .container {
+                padding: 16px 4vw;
+            }
+            .nav-container {
+                padding: 0 6px;
+            }
+            .brand {
+                font-size: 1.1rem;
+            }
+            .ai-section {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            .ai-logo {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Add the video element for the background -->
+    <video autoplay muted loop playsinline style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+        <source src="a_purple_colored_curved_lined_design_background.mp4" type="video/mp4">
+    </video>
+    <nav aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-left">
+                <img src="image-removebg-preview (4).png" alt="Budzone Logo" style="width:40px;height:40px;">
+                <a href="index.html" class="brand">Budzone</a>
+            </div>
+            <ul class="nav-right">
+                <li><a href="index.html" style="font-weight:bold;">Home</a></li>
+                <li><a href="contact.html" style="font-weight:bold;">Contact Us</a></li>
+                <li><a href="work.html" style="font-weight:bold;">Work</a></li>
+                <li><a href="a-info.html" style="font-weight:bold;">AI Info</a></li>
+                <li><a href="portfolio.html" style="font-weight:bold;">Portfolio</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>AI Place: Explore Top AI Models</h1>
+
+        <div class="ai-section">
+            <div class="ai-logo">
+                <a href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer">
+                    <img src="perpexity.png" alt="Perplexity AI Logo" loading="lazy">
+                </a>
+            </div>
+            <div class="ai-content">
+                <div class="ai-title">Perplexity AI</div>
+                <div class="ai-info">
+                    Perplexity AI is a conversational web search engine that uses advanced large language models to answer queries with real-time web results and citations. Founded in 2022, it offers both free and Pro versions, letting users choose from models like GPT-3.5, GPT-4 Omni, and Claude 3, with multimodal capabilities for text, image, and code generation.<br>
+                    <strong>Key features:</strong>
+                    <ul class="ai-features">
+                        <li>Conversational search with natural language understanding</li>
+                        <li>Direct answers with source citations</li>
+                        <li>Real-time web search and summarization</li>
+                        <li>Supports follow-up questions and context</li>
+                        <li>Multimodal: text, images, and simple code</li>
+                        <li>API access for developers</li>
+                        <li>Personalized search history and suggestions</li>
+                        <li>Ability to upload and analyze documents</li>
+                        <li>Mobile app available for iOS and Android</li>
+                        <li>Choose between multiple AI models</li>
+                        <li>Pro version with advanced features</li>
+                        <li>Supports document summarization</li>
+                        <li>Provides related questions and answers</li>
+                        <li>Easy sharing of results</li>
+                        <li>Supports markdown formatting in answers</li>
+                        <li>Offers browser extension</li>
+                        <li>Integrates with productivity tools</li>
+                        <li>Ad-free experience for Pro users</li>
+                        <li>Supports voice input on mobile</li>
+                        <li>Fast response times</li>
+                        <li>Regularly updated with new features</li>
+                        <li>Community-driven feedback and improvements</li>
+                        <li>Privacy-focused: no tracking of personal data</li>
+                        <li>Supports citation export</li>
+                        <li>Offers AI-powered writing assistance</li>
+                        <li>Customizable search preferences</li>
+                        <li>Supports multiple languages</li>
+                        <li>Accessible interface for all users</li>
+                        <li>Educational resources and guides</li>
+                        <li>24/7 customer support for Pro users</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="ai-section">
+            <div class="ai-logo">
+                <a href="https://grok.x.ai/" target="_blank" rel="noopener noreferrer">
+                    <img src="grok.jpg" alt="Grok 3 Logo" loading="lazy">
+                </a>
+            </div>
+            <div class="ai-content">
+                <div class="ai-title">Grok</div>
+                <div class="ai-info">
+                    Grok 3 is a next-generation AI chatbot developed by Elon Musk’s xAI, integrated into the X platform. Its logo features a black hole, symbolizing the quest to understand the unknown.<br>
+                    <strong>Key features:</strong>
+                    <ul class="ai-features">
+                        <li>Real-time access to data from X (formerly Twitter)</li>
+                        <li>DeepSearch: in-depth analysis with source links and step-by-step reasoning</li>
+                        <li>Generates text (stories, code, scripts, poems) and realistic images</li>
+                        <li>Handles controversial topics and provides transparent thought process</li>
+                        <li>Summarizes websites and translates languages</li>
+                        <li>Humorous and witty conversational style</li>
+                        <li>Customizable personality settings</li>
+                        <li>Integrates with X Premium for enhanced features</li>
+                        <li>Fast updates based on trending topics</li>
+                        <li>Supports meme and joke generation</li>
+                        <li>Offers developer API</li>
+                        <li>Provides real-time news summaries</li>
+                        <li>Supports multi-turn conversations</li>
+                        <li>Can generate polls and surveys</li>
+                        <li>Offers content moderation tools</li>
+                        <li>Integrates with X Spaces (audio chat)</li>
+                        <li>Supports image and video analysis</li>
+                        <li>Provides analytics for user queries</li>
+                        <li>Customizable response tone</li>
+                        <li>Supports multiple languages</li>
+                        <li>Offers educational content</li>
+                        <li>Integrates with third-party apps</li>
+                        <li>Provides trending topic alerts</li>
+                        <li>Supports voice-to-text input</li>
+                        <li>Offers AI-powered recommendations</li>
+                        <li>Privacy controls for user data</li>
+                        <li>Accessible on web and mobile</li>
+                        <li>Regular feature updates</li>
+                        <li>Community-driven improvements</li>
+                        <li>24/7 support for premium users</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="ai-section">
+            <div class="ai-logo">
+                <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="gemini.jpg" alt="Gemini Logo" loading="lazy">
+                </a>
+            </div>
+            <div class="ai-content">
+                <div class="ai-title">Google Gemini</div>
+                <div class="ai-info">
+                    Gemini is Google’s most advanced and versatile AI, designed to be natively multimodal and available in several sizes (Ultra, Pro, Nano, Flash). Its logo features a stylized spark, referencing the twin stars of the Gemini constellation.<br>
+                    <strong>Key features:</strong>
+                    <ul class="ai-features">
+                        <li>State-of-the-art performance on text, image, audio, and video tasks</li>
+                        <li>Advanced reasoning and explanation abilities</li>
+                        <li>Multimodal input: text, images, audio, video</li>
+                        <li>Contextual understanding and follow-up refinement</li>
+                        <li>Integrated with Google apps and services</li>
+                        <li>Excels at coding and code translation</li>
+                        <li>Seamless integration with Google Workspace (Docs, Sheets, Gmail)</li>
+                        <li>Supports over 40 languages</li>
+                        <li>Available on mobile and web platforms</li>
+                        <li>Offers voice assistant capabilities</li>
+                        <li>Provides real-time translation</li>
+                        <li>Supports document summarization</li>
+                        <li>Offers AI-powered writing suggestions</li>
+                        <li>Integrates with Google Search</li>
+                        <li>Provides educational resources</li>
+                        <li>Supports image and video generation</li>
+                        <li>Offers privacy and security controls</li>
+                        <li>Customizable user interface</li>
+                        <li>Supports collaborative workspaces</li>
+                        <li>Provides API for developers</li>
+                        <li>Offers accessibility features</li>
+                        <li>Regularly updated with new features</li>
+                        <li>Supports cloud-based storage</li>
+                        <li>Offers smart scheduling and reminders</li>
+                        <li>Integrates with Google Calendar</li>
+                        <li>Provides data analytics tools</li>
+                        <li>Supports offline mode</li>
+                        <li>Offers customer support</li>
+                        <li>Community-driven feedback</li>
+                        <li>Available for enterprise solutions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="ai-section">
+            <div class="ai-logo">
+                <a href="https://chat.openai.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="gpt-4.png" alt="GPT-4 Logo" loading="lazy">
+                </a>
+            </div>
+            <div class="ai-content">
+                <div class="ai-title">GPT-4</div>
+                <div class="ai-info">
+                    GPT-4, developed by OpenAI, is a large multimodal language model that can process both text and images. Known for its improved accuracy, reasoning, and safety over previous GPT models, GPT-4 is widely used for chatbots, content creation, coding, tutoring, and more.<br>
+                    <strong>Key features:</strong>
+                    <ul class="ai-features">
+                        <li>Processes both text and images</li>
+                        <li>Advanced reasoning, summarization, and creativity</li>
+                        <li>High accuracy and safety improvements</li>
+                        <li>Supports complex conversations and task automation</li>
+                        <li>Widely integrated in consumer and enterprise applications</li>
+                        <li>Extensive plugin and API ecosystem</li>
+                        <li>Custom GPTs for specialized tasks</li>
+                        <li>Supports over 50 languages</li>
+                        <li>Available via web, API, and mobile apps</li>
+                        <li>Offers code generation and debugging</li>
+                        <li>Provides real-time translation</li>
+                        <li>Supports document summarization</li>
+                        <li>Offers AI-powered writing assistance</li>
+                        <li>Integrates with productivity tools</li>
+                        <li>Provides educational tutoring</li>
+                        <li>Supports voice input and output</li>
+                        <li>Offers privacy and security controls</li>
+                        <li>Customizable conversation memory</li>
+                        <li>Regularly updated with new features</li>
+                        <li>Supports markdown and LaTeX formatting</li>
+                        <li>Offers image analysis and description</li>
+                        <li>Provides data analytics and visualization</li>
+                        <li>Supports plugin extensions</li>
+                        <li>Offers customer support integration</li>
+                        <li>Accessible interface for all users</li>
+                        <li>Community-driven improvements</li>
+                        <li>Available for enterprise solutions</li>
+                        <li>Supports cloud-based workflows</li>
+                        <li>Offers smart scheduling and reminders</li>
+                        <li>24/7 support for premium users</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="ai-section">
+            <div class="ai-logo">
+                <a href="https://claude.ai/new" target="_blank" rel="noopener noreferrer">
+                       <img src="image.png" alt="Claude 3">                </a>
+            </div>
+            <div class="ai-content">
+                <div class="ai-title">Claude 3</div>
+                <div class="ai-info">
+                    Claude 3, by Anthropic, is an advanced AI assistant focused on safety, helpfulness, and reliability for enterprise and consumer use.<br>
+                    <strong>Key features:</strong>
+                    <ul class="ai-features">
+                        <li>High-level reasoning and comprehension</li>
+                        <li>Summarizes long documents and conversations</li>
+                        <li>Supports code generation and debugging</li>
+                        <li>Handles complex instructions and multi-step tasks</li>
+                        <li>Privacy-first design with strong data controls</li>
+                        <li>Integrates with business workflows</li>
+                        <li>Available via API and web interface</li>
+                        <li>Supports multiple languages</li>
+                        <li>Provides creative writing and brainstorming</li>
+                        <li>Offers safe and non-toxic responses</li>
+                        <li>Customizable for enterprise needs</li>
+                        <li>Fast and scalable for large teams</li>
+                        <li>Supports image and file analysis</li>
+                        <li>Provides detailed explanations and justifications</li>
+                        <li>Regularly updated with new features</li>
+                        <li>Accessible interface for all users</li>
+                        <li>24/7 customer support for enterprise</li>
+                        <li>Supports markdown formatting</li>
+                        <li>Offers browser extension</li>
+                        <li>Integrates with productivity tools</li>
+                        <li>Ad-free experience for Pro users</li>
+                        <li>Supports voice input on mobile</li>
+                        <li>Fast response times</li>
+                        <li>Community-driven feedback and improvements</li>
+                        <li>Supports citation export</li>
+                        <li>Offers AI-powered writing assistance</li>
+                        <li>Customizable search preferences</li>
+                        <li>Educational resources and guides</li>
+                        <li>Supports document summarization</li>
+                        <li>Provides related questions and answers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="ai-section">
+            <div class="ai-logo">
+                <a href="https://www.cohere.com/" target="_blank" rel="noopener noreferrer">
+         <img src="save.jpg" alt="Cohere AI Logo" loading="lazy" style="background:#fff; border-radius:8px; max-width:70px; max-height:70px;">
+                </a>
+            </div>
+            <div class="ai-content">
+                <div class="ai-title">Cohere Command R</div>
+                <div class="ai-info">
+                    Cohere Command R is a retrieval-augmented generation (RAG) AI model designed for enterprise search, summarization, and knowledge management.<br>
+                    <strong>Key features:</strong>
+                    <ul class="ai-features">
+                        <li>Retrieval-augmented generation for accurate answers</li>
+                        <li>Enterprise-grade security and privacy</li>
+                        <li>Summarizes large sets of documents</li>
+                        <li>Integrates with internal company data sources</li>
+                        <li>Supports multi-turn conversations</li>
+                        <li>Customizable for specific industries</li>
+                        <li>Fast and scalable for business use</li>
+                        <li>Provides citations for all answers</li>
+                        <li>API and cloud deployment options</li>
+                        <li>Supports multiple languages</li>
+                        <li>Offers advanced search and filtering</li>
+                        <li>Integrates with productivity tools</li>
+                        <li>Regularly updated with new features</li>
+                        <li>Provides analytics and usage insights</li>
+                        <li>24/7 enterprise support</li>
+                        <li>Accessible interface for all users</li>
+                        <li>Supports document summarization</li>
+                        <li>Provides related questions and answers</li>
+                        <li>Easy sharing of results</li>
+                        <li>Offers browser extension</li>
+                        <li>Integrates with business chat platforms</li>
+                        <li>Supports voice input on mobile</li>
+                        <li>Community-driven feedback and improvements</li>
+                        <li>Privacy-focused: no tracking of personal data</li>
+                        <li>Supports citation export</li>
+                        <li>Offers AI-powered writing assistance</li>
+                        <li>Customizable search preferences</li>
+                        <li>Educational resources and guides</li>
+                        <li>Supports multiple languages</li>
+                        <li>Accessible interface for all users</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="ai-section">
+            <div class="ai-logo">
+                <a href="https://www.meta.ai/" target="_blank" rel="noopener noreferrer">
+                    <img src="meta.jpg" alt="meta ai" loading="lazy" style="background:#fff; border-radius:8px; max-width:70px; max-height:70px;">
+                </a>
+            </div>
+            <div class="ai-content">
+                <div class="ai-title">Meta AI (Llama 3)</div>
+                <div class="ai-info">
+                    Meta AI, powered by Llama 3, is Meta’s open-source large language model, designed for research, development, and integration into consumer products.<br>
+                    <strong>Key features:</strong>
+                    <ul class="ai-features">
+                        <li>Open-source and freely available for research</li>
+                        <li>Strong performance on text and code tasks</li>
+                        <li>Supports chat, summarization, and Q&A</li>
+                        <li>Integrates with Facebook, Instagram, and WhatsApp</li>
+                        <li>Customizable for specific use cases</li>
+                        <li>Available in multiple sizes for different needs</li>
+                        <li>Supports multiple languages</li>
+                        <li>Active developer and research community</li>
+                        <li>Regularly updated with new releases</li>
+                        <li>Provides API and cloud deployment</li>
+                        <li>Focus on transparency and safety</li>
+                        <li>Supports plugin extensions</li>
+                        <li>Offers educational resources</li>
+                        <li>Accessible for students and developers</li>
+                        <li>Integrates with Meta’s AR/VR products</li>
+                        <li>Provides creative writing and brainstorming</li>
+                        <li>Offers safe and non-toxic responses</li>
+                        <li>Customizable for enterprise needs</li>
+                        <li>Fast and scalable for large teams</li>
+                        <li>Supports image and file analysis</li>
+                        <li>Provides detailed explanations and justifications</li>
+                        <li>Accessible interface for all users</li>
+                        <li>24/7 customer support for enterprise</li>
+                        <li>Supports markdown formatting</li>
+                        <li>Offers browser extension</li>
+                        <li>Integrates with productivity tools</li>
+                        <li>Ad-free experience for Pro users</li>
+                        <li>Supports voice input on mobile</li>
+                        <li>Fast response times</li>
+                        <li>Community-driven feedback and improvements</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 Budside. Crafted by Dhakir.
+    </footer>
+</body>
+</html>

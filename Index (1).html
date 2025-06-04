@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budzone</title>
+    <link rel="shortcut icon" href="image-removebg-preview (4).png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+            background: #7c3aed;
+            color: #fff;
+            min-height: 100vh;
+            font-size: 1rem;
+        }
+        nav {
+            width: 100%;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            position: relative;
+            z-index: 10;
+        }
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+            padding: 0 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .nav-left, .nav-right {
+            display: flex;
+            align-items: center;
+        }
+        .big-icon {
+            width: 48px;
+            height: 48px;
+            margin-right: 12px;
+        }
+        .brand {
+            color: #7c3aed;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .nav-right {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-right li {
+            margin: 0 10px;
+        }
+        .nav-right li a {
+            color: #7c3aed;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+        .menu-button {
+            display: none;
+        }
+        .sidebar {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 220px;
+            height: 100%;
+            background: #2d006b;
+            padding-top: 40px;
+            z-index: 100;
+        }
+        .sidebar li {
+            margin: 18px 0;
+            padding-left: 30px;
+        }
+        .sidebar li a {
+            color: #fff;
+            font-size: 1.15rem;
+        }
+        .container {
+            max-width: 90%;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+        }
+        .texts {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .texts h2 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #fff;
+        }
+        .texts p {
+            color: #ede9fe;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+        }
+        button.Explore, button.AI {
+            background: #a78bfa;
+            color: #2d006b;
+            border: none;
+            padding: 12px 32px;
+            border-radius: 7px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+        button.Explore:hover, button.AI:hover {
+            background: #fff;
+            color: #7c3aed;
+        }
+        footer {
+            text-align: center;
+            color: #ccc;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        @media (max-width: 768px) {
+            .nav-right li:not(.menu-button) {
+                display: none;
+            }
+            .menu-button {
+                display: block;
+            }
+            .big-icon {
+                width: 40px;
+                height: 40px;
+            }
+            .texts h2 {
+                font-size: 1.8rem;
+            }
+            .texts p {
+                font-size: 1rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 0 10px;
+            }
+            .brand {
+                font-size: 1.2rem;
+            }
+            .container {
+                padding: 1rem;
+            }
+            .buttons {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-left">
+                <img src="image-removebg-preview (4).png" alt="Budside Logo" class="big-icon">
+                <a href="#" class="brand">Budzone</a>
+            </div>
+            <ul class="nav-right">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="tool.html">Tools</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="ai-info.html">AI Info</a></li>
+                <li><a href="protofolio.html">Protofolio</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li class="menu-button" onclick="showSidebar()">
+                    <a href="#">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect y="4" width="24" height="2" fill="currentColor"/>
+                            <rect y="11" width="24" height="2" fill="currentColor"/>
+                            <rect y="18" width="24" height="2" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <ul class="sidebar">
+                <li onclick="hideSidebar()">
+                    <a href="#">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </a>
+                </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="ai-info.html">AI Info</a></li>
+                <li><a href="protofolio.html">Protofolio</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="texts">
+            <h2>Welcome to Budzone</h2>
+            <p>Your one-stop solution for all your needs.</p>
+            <p>Empowering you with simple, powerful solutions.</p>
+            <div class="buttons">
+                <a href="budside-ai.html"><button class="AI">Explore Budside AI</button></a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 Budside. Crafted by Dhakir.
+    </footer>
+    <script>
+        function showSidebar() {
+            document.querySelector('.sidebar').style.display = 'block';
+        }
+        function hideSidebar() {
+            document.querySelector('.sidebar').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
